@@ -1,0 +1,106 @@
+/* styles.css */
+
+:root {
+	--background-color: #000000;
+	--text-color: #ffff00;
+	--font-family: Times New Roman, serif;
+}
+
+
+/* General styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box; 
+}
+
+/* Container for the entire page */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+    background-color: var(--background-color);
+    color: var(--text-color);
+	padding: 20px;
+    text-align: center;
+}
+
+/* Main content area */
+.main {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: var(--background-color);
+	color: var(--text-color);
+    padding: 20px;
+    width: 15%;
+}
+
+.sidebar a{
+	color: #AEAE13; 
+}
+
+.sidebar a:hover {
+	color: var(--text-color); 
+}
+
+/* Active link styling */
+.sidebar p a.active {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Main content styling */
+.content {
+	background-color: var(--background-color);
+	color: var(--text-color);
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer styling */
+.footer {
+    background-color: var(--background-color);
+	color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive images */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: space-around; 
+		padding: 10px; 
+    }
+	.sidebar p{
+		margin: 5px 5px; 
+		flex: 1 1 auto; 
+		text-align: center; 
+		padding: 5px; 
+	}
+	.sidebar a {
+		display: inline-block;
+		width: 100%;
+		box-sizing: border-box; 
+	}
+}
